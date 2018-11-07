@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/fase1.unity
+    guid: 6f022b5ed7af9f64b9862a583a608dd7
+  - enabled: 1
+    path: Assets/Scenes/fase2.unity
+    guid: 362da79d5c951f8449a6a6af2f9ba391
+  - enabled: 1
+    path: Assets/Scenes/Ganhou.unity
+    guid: 1b17a1163d3f22e4f9bf09693f935964
+  - enabled: 1
+    path: Assets/Scenes/fimDeJogo.unity
+    guid: 54d17e0da15e993428a2bb3177ca21e1
+  m_configObjects: {}
