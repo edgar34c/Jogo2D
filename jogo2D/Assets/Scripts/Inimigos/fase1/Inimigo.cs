@@ -19,13 +19,20 @@ public class Inimigo : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //pega localização do personagem no eixo X
         yZ2 = transform.position.x;
+        //roda o metodo posi
         posi();
+        
+        //controla a direção que o inimigo anda
         if (dir)
         {
+            //pega posição x
             yZ2 = transform.position.x;
+            //adiciona a velocidade
             yZ2 += velo * Time.deltaTime;
             transform.eulerAngles = new Vector2(0, 0);
+            //faz o descolamento do inimigo
             transform.position = new Vector2(yZ2, transform.position.y);
 
         }
@@ -55,8 +62,10 @@ public class Inimigo : MonoBehaviour {
         }
     }
 
+    //metodo para mudar direção quando o inimigo chegar ao limite
     void posi()
     {
+        //neste caso o limite é 3.57
         if (yZ2 >= 3.57)
         {
             dir = false;
@@ -69,6 +78,7 @@ public class Inimigo : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D coli)
     {
+        //se o personagem colidir com a cabeça do inimigo
         if (coli.CompareTag("ataque"))
         {
             dead = true;
